@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Voxel Pong 3D</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="score-board">
+        <span id="player-score">0</span> - <span id="ai-score">0</span>
+    </div>
+    <div id="info">Loading Assets...</div> <!-- Updated initial text -->
+    <div id="game-canvas-container">
+        <!-- Three.js Canvas will be inserted here -->
+    </div>
+
+    <!-- Virtual Joystick Elements -->
+    <div id="joystick-container">
+        <div id="joystick-base">
+            <div id="joystick-knob"></div>
+        </div>
+    </div>
+
+    <!-- Launch Ball Button -->
+    <button id="launch-button" style="display: none;">LAUNCH</button> <!-- Initially hidden -->
+
+    <!-- Import the Three.js library -->
+    <script src="lib/three.min.js"></script>
+
+    <!-- Import Game Scripts (Only main.js now) -->
+    <!-- <script src="js/PaddleControl.js"></script> REMOVED -->
+    <script src="js/main.js"></script>
+</body>
+</html>
