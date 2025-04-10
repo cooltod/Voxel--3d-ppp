@@ -2,34 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Voxel Pong 3D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Phaser Pong 2D</title>
+
+    <!-- Google Fonts Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Phaser 3 Library via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+    <!-- End Phaser -->
+
 </head>
 <body>
+    <!-- Phaser game canvas will be injected here -->
+    <div id="phaser-game-container"></div>
+
+    <!-- HTML Overlays (Phaser can manage text, but HTML is sometimes easier for simple overlays) -->
     <div id="score-board">
         <span id="player-score">0</span> - <span id="ai-score">0</span>
     </div>
-    <div id="info">Loading Assets...</div> <!-- Updated initial text -->
-    <div id="game-canvas-container">
-        <!-- Three.js Canvas will be inserted here -->
-    </div>
+    <div id="info">Loading...</div>
 
-    <!-- Virtual Joystick Elements -->
-    <div id="joystick-container">
+    <!-- Virtual Joystick Elements (Visuals controlled by CSS) -->
+    <div id="joystick-container" style="display: none;"> <!-- Initially hidden -->
         <div id="joystick-base">
             <div id="joystick-knob"></div>
         </div>
     </div>
 
-    <!-- Launch Ball Button -->
+    <!-- Launch Ball Button (Visuals controlled by CSS) -->
     <button id="launch-button" style="display: none;">LAUNCH</button> <!-- Initially hidden -->
 
-    <!-- Import the Three.js library -->
-    <script src="lib/three.min.js"></script>
-
-    <!-- Import Game Scripts (Only main.js now) -->
-    <!-- <script src="js/PaddleControl.js"></script> REMOVED -->
+    <!-- Game Logic -->
     <script src="js/main.js"></script>
 </body>
 </html>
